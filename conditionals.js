@@ -51,7 +51,12 @@ console.log(random);
 const password = prompt("please enter a new password");
 
 if (password.length >= 6 ) {
-    console.log("Long enough password")
+    // console.log("Long enough password")       - dont need bc if it is long enough then moves to next funtion of checking for spaces
+    if (password.indexOf(' ') === -1) {
+        console.log("Good job! no space!")
+    } else {
+        console.log("Password cannot contain spaces!");
+    }
 } else {
     console.log("password too short! must be 6+ character");
 }
